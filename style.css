@@ -1,0 +1,54 @@
+.slide{
+    height:580px;
+    width: 800px;
+    margin:120px auto;
+}
+
+.flaticon{
+    height:2rem;
+}
+
+.icons>a>img{
+    margin-right: 50px;
+}
+
+.center {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1 rem;
+}
+
+.icons{
+    margin-right: 60px;
+}
+
+body{
+    background-color: #B8DFD8;
+}
+
+h1{
+    margin-left:50px;
+}
+
+
+
+.images{
+    opacity: 0.5;
+}
+h1{
+    font-family: 'Lobster', cursive;
+}
+hr {
+    height: 1px !important;
+    border-style: none none;
+    border-bottom: solid gray;
+    margin-top: 1.5px !important;
+    margin-bottom: 0.4rem !important;
+}
+.link{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
