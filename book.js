@@ -1,17 +1,18 @@
-$('.carousel').on('touchstart', function(event){
-    const xClick = event.originalEvent.touches[0].pageX;
-    $(this).one('touchmove', function(event){
-        const xMove = event.originalEvent.touches[0].pageX;
-        const sensitivityInPx = 5;
-
-        if( Math.floor(xClick - xMove) > sensitivityInPx ){
-            $(this).carousel('next');
-        }
-        else if( Math.floor(xClick - xMove) < -sensitivityInPx ){
-            $(this).carousel('prev');
-        }
+if (Modernizr.touch) {
+    $(".carousel").swipe({
+      swipe: function(
+        event,
+        direction,
+        distance,
+        duration,
+        fingerCount,
+        fingerData
+      ) {
+        if (direction == "left") $(this).carousel("next");
+        if (direction == "right") $(this).carousel("prev");
+      },
+      allowPageScroll: "vertical"
     });
-    $(this).on('touchend', function(){
-        $(this).off('touchmove');
-    });
-});
+  } else {
+    $(".alert").removeClass("hidden");
+  }
